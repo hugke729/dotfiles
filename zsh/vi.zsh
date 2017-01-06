@@ -1,4 +1,6 @@
 bindkey -v
+
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 # vi mode
 bindkey -M vicmd 'j' history-beginning-search-forward
 bindkey -M vicmd 'k' history-beginning-search-backward
@@ -12,6 +14,9 @@ bindkey "^?" backward-delete-char
 
 # Ctrl-w removed word backwards
 bindkey '^w' backward-kill-word
+
+# Reimplement Ctrl-r
+bindkey '^r' history-incremental-search-backward
 
 # Edit long command with vim
 bindkey -v

@@ -41,14 +41,14 @@ alias gdt='git difftool'
 alias gp='git push'
 alias gs='git status'
 
-# Make cycle
-alias bam='../../../tools/genmake2 -mods=../code -of=../../../tools/build_options/linux_amd64_gfortran | tail -10; make depend | tail -10; make | tail -10'
-alias md='make depend'
-
 # Misc
 alias -g nul="2> /dev/null"
-alias ffmpeg='~/.imageio/ffmpeg/ffmpeg.linux32'
 alias ka='killall'
 alias np='env WINEPREFIX="/home/hugke729/.wine" wine C:\\users\\hugke729\\My\ Documents\\Programs\\Notepad++\\notepad++.exe'
 alias plz='sudo $(fc -ln -1)' # rerun last command with sudo priveledges
+alias shvb='sh ~/.vimbuffer'
+alias sv='sudo vim'
+alias jb='jekyll build'
+alias jsd='jekyll serve --detach'
+alias clean_latex='rm -i *.out; rm -i *.aux; rm -i *.log; rm -i *.aux'
 

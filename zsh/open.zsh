@@ -5,7 +5,8 @@ autoload -U zsh-mime-setup
 zsh-mime-setup
 
 # replace some of the default handling that zsh-mime-setup gets wrong
-alias -s py='exo-open'
+alias -s py='subl'
+alias -s sh='zsh'
 alias -s ipynb='jupyter notebook'
 alias -s F='subl'
 alias -s h='subl'
@@ -17,19 +18,26 @@ inkscape() {
     /home/hugke729/Documents/Other/inkscape_start.sh "$@"
 }
 
-# mplayer spits out errors, so redirect these to null
+# Create functions that open files but give the command line back
 bg-mplayer() {
 	"$@" </dev/null >/dev/null 2>&1 &
 }
-alias -s mp4='bg-mplayer mpv '
-alias -s gif='bg-mplayer mpv '
-
 bg-atril() {
 	atril "$@" </dev/null >/dev/null 2>&1 &
 }
-alias -s pdf='bg-atril'
-
+bg-zathura() {
+	zathura "$@" </dev/null >/dev/null 2>&1 &
+}
 bg-jupyter-notebook() {
 	jupyter notebook "$@" </dev/null >/dev/null 2>&1 &
 }
+bg-feh() {
+	feh "$@" </dev/null >/dev/null 2>&1 &
+}
+
+alias -s mp4='bg-mplayer mpv '
+alias -s gif='bg-mplayer mpv '
+# alias -s pdf='bg-atril'
+alias -s pdf='bg-zathura'
 alias -s ipynb='bg-jupyter-notebook'
+alias feh='bg-feh'
