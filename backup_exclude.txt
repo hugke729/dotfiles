@@ -1,0 +1,11 @@
+*/Backgrounds/**
+*/Bathymetry/**
+*/TS_climatology/**
+*/spices.cache/**
+*/run*/**
+*/build/**
+*/from_jasper/**
+*.data
+*.meta
+*.bin
+

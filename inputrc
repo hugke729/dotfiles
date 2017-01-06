@@ -1,0 +1,14 @@
+## Arrow up
+"\e[A":history-search-backward
+## Arrow down
+"\e[B": history-search-forward
+
+set show-mode-in-prompt on
+set editing-mode vi
+set keymap vi-command
+"j": history-search-forward
+"k": history-search-backward
+
+set keymap vi-insert
+"C-p": history-search-backward
+"C-n": history-search-forward
