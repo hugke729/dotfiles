@@ -14,6 +14,11 @@ cl() {
         cd "$@" ; l
 }
 
+# Markdown preview
+mp() {
+        grip -b "$@" &>/dev/null &
+}
+
 # dictionary (too much info though to be really useful)
 di() {
     dict -d gcide $1 | less
