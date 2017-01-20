@@ -2,6 +2,7 @@ alias bam='../../../tools/genmake2 -mods=../code -of=../../../tools/build_option
 alias md='make depend'
 alias lT='l T*.data'
 alias nt='l T*.data | wc -l'
+alias rmmd='rm *.meta; rm *.data'
 
 # Copy all files needed for open_mdsdataset to work
 copy_gridfiles() {
