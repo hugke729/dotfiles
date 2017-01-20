@@ -12,6 +12,7 @@ from MyNumpyTools import minmax
 warnings.filterwarnings('ignore', '.*assigned to before global declaration*.')
 warnings.filterwarnings('ignore', '.*get_axis_bgcolor function was deprecated*.')
 warnings.filterwarnings('ignore','elementwise comparison')
+warnings.filterwarnings('ignore','.*requires a non-empty pattern match*.')
 
 matplotlib.font_manager.X11FontDirectories.append('/home/hugke729/.local/share/fonts/')
 
