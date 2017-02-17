@@ -22,6 +22,7 @@ alias manh='man --html=google-chrome'
 
 # Directories
 alias cdp='cd ~/PhD/Python/'
+alias cdmy='cd ~/PhD/Python/MyScripts/'
 alias dot='cd ~/Documents/dotfiles'
 alias ld='l -d */'
 alias n='nemo . 2>/dev/null 1>/dev/null'
@@ -51,4 +52,5 @@ alias sv='sudo vim'
 alias jb='jekyll build'
 alias jsd='jekyll serve --detach'
 alias clean_latex='rm -i *.out; rm -i *.aux; rm -i *.log; rm -i *.aux'
+alias briss='java -jar ~/Programs/briss-0.9/briss-0.9.jar'
 

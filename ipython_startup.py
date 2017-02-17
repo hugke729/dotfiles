@@ -2,6 +2,7 @@ import warnings
 import pickle
 import numpy as np
 import matplotlib
+from matplotlib.pyplot import figure
 from numpy.core.numeric import array_repr
 from IPython.terminal.embed import InteractiveShellEmbed
 from MyFigureUtils import splay_figures
@@ -11,6 +12,7 @@ from MyNumpyTools import minmax
 # Work-around for warnings that keeps coming up but aren't problematic
 warnings.filterwarnings('ignore', '.*assigned to before global declaration*.')
 warnings.filterwarnings('ignore', '.*get_axis_bgcolor function was deprecated*.')
+warnings.filterwarnings('ignore', '.*ishold function was deprecated*.')
 warnings.filterwarnings('ignore','elementwise comparison')
 warnings.filterwarnings('ignore','.*requires a non-empty pattern match*.')
 
@@ -47,7 +49,6 @@ class AD(dict):
     def __init__(self, *args, **kwargs):
         super(AD, self).__init__(*args, **kwargs)
         self.__dict__ = self
-
 
 ipshell = InteractiveShellEmbed()
 ipshell.magic('%load_ext autoreload')
