@@ -1,8 +1,9 @@
-alias bam='../../../tools/genmake2 -mods=../code -of=../../../tools/build_options/linux_amd64_gfortran | tail -10; make depend | tail -10; make | tail -10'
+alias bam='../../../tools/genmake2 -mods=../code -mpi -of=../../../tools/build_options/linux_amd64_gfortran | tail -10; make depend | tail -10; make | tail -10'
 alias md='make depend'
 alias lT='l T*.data'
 alias nt='l T*.data | wc -l'
 alias rmmd='rm *.meta; rm *.data'
+alias vis='vim STDOUT.0000'
 
 # Copy all files needed for open_mdsdataset to work
 copy_gridfiles() {
