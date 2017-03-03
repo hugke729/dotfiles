@@ -4,6 +4,7 @@ alias lT='l T*.data'
 alias nt='l T*.data | wc -l'
 alias rmmd='rm *.meta; rm *.data'
 alias vis='vim STDOUT.0000'
+alias vis='vim STDERR.0000'
 
 # Copy all files needed for open_mdsdataset to work
 copy_gridfiles() {
