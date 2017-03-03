@@ -1,6 +1,8 @@
+import matplotlib.pyplot as plt
 import warnings
 import pickle
 import numpy as np
+import numpy.ma as ma
 import matplotlib
 from matplotlib.pyplot import figure
 from numpy.core.numeric import array_repr
@@ -15,8 +17,16 @@ warnings.filterwarnings('ignore', '.*get_axis_bgcolor function was deprecated*.'
 warnings.filterwarnings('ignore', '.*ishold function was deprecated*.')
 warnings.filterwarnings('ignore','elementwise comparison')
 warnings.filterwarnings('ignore','.*requires a non-empty pattern match*.')
+warnings.filterwarnings('ignore',".*Couldn't find available_diagnostics.log*.")
+warnings.filterwarnings('ignore',".*Not sure what to do with rlev = L*.")
 
 matplotlib.font_manager.X11FontDirectories.append('/home/hugke729/.local/share/fonts/')
+
+
+# Make background grey, not white
+def grey():
+    plt.gca().set_facecolor('grey')
+    plt.draw()
 
 
 # Define functions to load or dump pickle files
