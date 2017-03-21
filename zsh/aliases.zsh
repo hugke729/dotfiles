@@ -51,6 +51,6 @@ alias shvb='sh ~/.vimbuffer'
 alias sv='sudo vim'
 alias jb='jekyll build'
 alias jsd='jekyll serve --detach'
-alias clean_latex='rm -i *.out; rm -i *.aux; rm -i *.log; rm -i *.aux'
+alias clean_latex='rm -i *.out; rm -i *.aux; rm -i *.log; rm -i *.aux; rm -i *.bbl; rm *.blg'
 alias briss='java -jar ~/Programs/briss-0.9/briss-0.9.jar'
 
