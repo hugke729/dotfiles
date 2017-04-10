@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from collections import OrderedDict
 import warnings
 import pickle
 import numpy as np
@@ -10,11 +11,14 @@ from IPython.terminal.embed import InteractiveShellEmbed
 from MyFigureUtils import splay_figures
 from MyPlotFunctions import flipy
 from MyNumpyTools import minmax
+from matplotlib.pyplot import clf
+from MyInteractive import disp_latlon
 
 # Work-around for warnings that keeps coming up but aren't problematic
 warnings.filterwarnings('ignore', '.*assigned to before global declaration*.')
 warnings.filterwarnings('ignore', '.*get_axis_bgcolor function was deprecated*.')
 warnings.filterwarnings('ignore', '.*ishold function was deprecated*.')
+warnings.filterwarnings('ignore', '.*axes.hold is deprecated*.')
 warnings.filterwarnings('ignore','elementwise comparison')
 warnings.filterwarnings('ignore','.*requires a non-empty pattern match*.')
 warnings.filterwarnings('ignore',".*Couldn't find available_diagnostics.log*.")
@@ -27,6 +31,13 @@ matplotlib.font_manager.X11FontDirectories.append('/home/hugke729/.local/share/f
 def grey():
     plt.gca().set_facecolor('grey')
     plt.draw()
+
+
+def grey_all():
+    fig = plt.gcf()
+    for ax in fig.get_axes():
+        fig.sca(ax)
+        grey()
 
 
 # Define functions to load or dump pickle files
@@ -69,7 +80,11 @@ ipshell.magic('%autoreload 2')
 
 def my_array_repr(arr):
     orig_str = array_repr(arr)
-    return orig_str + '\n\nShape: ' + str(arr.shape)
+    return orig_str + '\n\nShape: ' + str(arr.shape) + '\n\n\n'
 
 
 np.set_string_function(my_array_repr)
+
+
+def fromfile(filename):
+    return np.fromfile(filename, '>d')

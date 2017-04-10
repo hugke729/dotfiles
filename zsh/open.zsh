@@ -6,6 +6,7 @@ zsh-mime-setup
 
 # replace some of the default handling that zsh-mime-setup gets wrong
 alias -s py='subl'
+alias -s m='subl'
 alias -s sh='zsh'
 alias -s ipynb='jupyter notebook'
 alias -s F='subl'

@@ -14,6 +14,8 @@ Plugin 'tmux-plugins/vim-tmux'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-markdown'
+Plugin 'fidian/hexmode'
 call vundle#end()
 
 syntax on

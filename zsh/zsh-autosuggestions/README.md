@@ -19,28 +19,28 @@ If you don’t use zgen, then use instructions for the manual installation.
 
 1. Load `tarruda/zsh-autosuggestions` and `jimmijj/zsh-syntax-highlighting` using zgen in your .zshrc file, for example:
 
-    ```sh
-    if ! zgen saved; then
-        echo "Creating a zgen save"
+```sh
+if ! zgen saved; then
+    echo "Creating a zgen save"
 
-        zgen load jimmijj/zsh-syntax-highlighting
+    zgen load jimmijj/zsh-syntax-highlighting
 
-        # autosuggestions should be loaded last
-        zgen load tarruda/zsh-autosuggestions
+    # autosuggestions should be loaded last
+    zgen load tarruda/zsh-autosuggestions
 
-        zgen save
-    fi
-    ```
+    zgen save
+fi
+```
 
 2. Enable zsh-autosuggestions; copy the following snippet and put it after the zgen config section in your .zshrc file:
 
-    ```sh
-    # Enable autosuggestions automatically.
-    zle-line-init() {
-        zle autosuggest-start
-    }
-    zle -N zle-line-init
-    ```
+```sh
+# Enable autosuggestions automatically.
+zle-line-init() {
+    zle autosuggest-start
+}
+zle -N zle-line-init
+```
 
 3. Run `zgen reset` and reopen your terminal.
 
@@ -49,31 +49,31 @@ If you don’t use zgen, then use instructions for the manual installation.
 
 1. Clone this repository to `~/.zsh/zsh-autosuggestions` (or anywhere else):
 
-    ```sh
-    git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-    ```
+```sh
+git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+```
 
 2. Clone zsh-syntax-highlighting repository to `~/.zsh/zsh-syntax-highlighting` (or anywhere else):
 
-    ```sh
-    git clone git://github.com/jimmijj/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
-    ```
+```sh
+git clone git://github.com/jimmijj/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
+```
 
 3. Load and enable autosuggestions; copy the following snippet and put it to your .zshrc file:
 
-    ```sh
-    # Load zsh-syntax-highlighting.
-    source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```sh
+# Load zsh-syntax-highlighting.
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-    # Load zsh-autosuggestions.
-    source ~/.zsh/zsh-autosuggestions/autosuggestions.zsh
+# Load zsh-autosuggestions.
+source ~/.zsh/zsh-autosuggestions/autosuggestions.zsh
 
-    # Enable autosuggestions automatically.
-    zle-line-init() {
-        zle autosuggest-start
-    }
-    zle -N zle-line-init
-    ```
+# Enable autosuggestions automatically.
+zle-line-init() {
+    zle autosuggest-start
+}
+zle -N zle-line-init
+```
 
 4. Reopen your terminal.
 
