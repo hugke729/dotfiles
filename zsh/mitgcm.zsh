@@ -12,3 +12,14 @@ copy_gridfiles() {
     scp parallel:/global/scratch/hugke729/"$@"/{Depth,DRC,DRF,DXC,DXG,DYC,DYG,hFacC,hFacS,hFacW,PHrefC,PHrefF,RAC,RAW,RAZ,RC,RF,XC,XG,YC,YG}{.meta,.data} .
 }
 
+genmake2 () {
+    if [[ $PWD = */code ]]; then
+        echo "No! You're in code directory, not build"
+    else
+        /home/hugke729/mitgcm/tools/genmake2 "$@" \
+            -rootdir=/home/hugke729/mitgcm \
+            -of=/home/hugke729/mitgcm/tools/build_options/linux_amd64_gfortran \
+            -mods=../code
+    fi
+}
+
