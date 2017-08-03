@@ -1,6 +1,7 @@
 # Searching
 alias ag="ag -i --color"
 alias ag_uni='ag "[\x80-\xFF]"'
+alias locate="locate -i"
 alias grep="grep --color=always --exclude-dir={.bzr,.cvs,.git,.hg,.svn}"
 alias -g G="| grep --exclude-dir={.bzr,.cvs,.git,.hg,.svn}"
 
