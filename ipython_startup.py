@@ -9,6 +9,7 @@ from matplotlib.pyplot import figure
 from numpy.core.numeric import array_repr
 from IPython.terminal.embed import InteractiveShellEmbed
 from MyFigureUtils import splay_figures
+sf = splay_figures
 from MyPlotFunctions import flipy
 from MyNumpyTools import minmax
 from matplotlib.pyplot import clf
@@ -25,6 +26,7 @@ warnings.filterwarnings('ignore',".*Couldn't find available_diagnostics.log*.")
 warnings.filterwarnings('ignore',".*Not sure what to do with rlev = L*.")
 
 matplotlib.font_manager.X11FontDirectories.append('/home/hugke729/.local/share/fonts/')
+
 
 
 # Make background grey, not white
