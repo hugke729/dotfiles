@@ -4,6 +4,7 @@ alias md='make depend'
 alias lT='l T*.data'
 alias nt='l T*.data | wc -l'
 alias rmmd='rm *.meta; rm *.data'
+alias rmnc='rm *.nc'
 alias vis='vim STDOUT.0000'
 alias vie='vim STDERR.0000'
 
