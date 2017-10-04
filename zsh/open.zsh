@@ -33,7 +33,10 @@ bg-jupyter-notebook() {
 	jupyter notebook "$@" </dev/null >/dev/null 2>&1 &
 }
 bg-feh() {
-	feh "$@" </dev/null >/dev/null 2>&1 &
+	feh -B white --geometry 1366x730+0+29 "$@" </dev/null >/dev/null 2>&1 &
+}
+bg-fehr() {
+	feh -B white --geometry 1920x1080+1366+312 "$@" </dev/null >/dev/null 2>&1 &
 }
 
 alias -s mp4='bg-mplayer mpv '
@@ -42,3 +45,4 @@ alias -s gif='bg-mplayer mpv '
 alias -s pdf='bg-zathura'
 alias -s ipynb='bg-jupyter-notebook'
 alias feh='bg-feh'
+alias fehr='bg-fehr'
