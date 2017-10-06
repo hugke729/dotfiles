@@ -13,7 +13,7 @@ sf = splay_figures
 from MyPlotFunctions import flipy
 from MyNumpyTools import minmax
 from matplotlib.pyplot import clf
-from MyInteractive import disp_latlon
+from MyInteractive import disp_latlon, click_dist, click_km
 
 # Work-around for warnings that keeps coming up but aren't problematic
 warnings.filterwarnings('ignore', '.*assigned to before global declaration*.')
