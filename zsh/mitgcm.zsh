@@ -7,7 +7,7 @@ alias rmmd='rm *.meta; rm *.data'
 alias rmnc='rm *.nc'
 alias vis='vim STDOUT.0000'
 alias vie='vim STDERR.0000'
-alias gluemnc=='/home/hugke729/MITgcm66h/utils/python/MITgcmutils/scripts/gluemncbig'
+alias gluemnc=='python2 /home/hugke729/MITgcm66h/utils/python/MITgcmutils/scripts/gluemncbig'
 
 # Copy all files needed for open_mdsdataset to work
 copy_gridfiles() {
