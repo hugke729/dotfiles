@@ -29,3 +29,10 @@ function take
 {
   command mkdir $1 && cd $1
 }
+
+# Drop shadow
+
+function ds
+{
+  convert $1 \( +clone -background gray -shadow 80x8+8+8 \) +swap -background white -layers merge +repage $2
+}
