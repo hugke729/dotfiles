@@ -36,3 +36,12 @@ function ds
 {
   convert $1 \( +clone -background gray -shadow 80x8+8+8 \) +swap -background white -layers merge +repage $2
 }
+
+# Edit pdf
+function editpdf
+{
+    qpdf --stream-data=uncompress $1 tmp_uncompressed.pdf &&
+    vim tmp_uncompressed.pdf &&
+    qpdf --stream-data=compress tmp_uncompressed.pdf $1 &&
+    rm tmp_uncompressed.pdf
+}
