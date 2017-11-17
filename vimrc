@@ -127,6 +127,7 @@ set nosol " Prevent the cursor from changing the current column when jumping to 
 if !has('nvim')
     set ttymouse=xterm2
 endif
+let g:hexmode_patterns='*.bin'
 
 " Path
 au BufRead,BufNewFile *.h set filetype=fortran

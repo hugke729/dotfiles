@@ -90,3 +90,7 @@ np.set_string_function(my_array_repr)
 
 def fromfile(filename):
     return np.fromfile(filename, '>d')
+
+
+def equal():
+    plt.gca().set_aspect('equal', 'box-forced')
