@@ -92,5 +92,6 @@ def fromfile(filename):
     return np.fromfile(filename, '>d')
 
 
-def equal():
-    plt.gca().set_aspect('equal', 'box-forced')
+def equal(ax=None):
+    ax = plt.gca() if ax is None else ax
+    ax.set_aspect('equal', 'box-forced')
