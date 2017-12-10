@@ -48,5 +48,5 @@ function editpdf
 
 function convert-ebook
 {
-    ebook-convert $1.ebup $1.pdf --filter-css "font-family,line-height" --change-justification "left" --embed-font-family "Palatino Linotype" --subset-embedded-fonts --remove-paragraph-spacing --remove-paragraph-spacing-indent-size 2 --paper-size='a5' --pdf-page-margin-left=12 --pdf-page-margin-right=12 --pdf-page-margin-bottom=12 --pdf-page-margin-top=12 --base-font-size=14
+    ebook-convert $1.epub $1.pdf --filter-css "font-family,line-height" --change-justification "left" --embed-font-family "Palatino Linotype" --subset-embedded-fonts --remove-paragraph-spacing --remove-paragraph-spacing-indent-size 1 --paper-size='a5' --pdf-page-margin-left=12 --pdf-page-margin-right=12 --pdf-page-margin-bottom=12 --pdf-page-margin-top=12 --base-font-size=14
 }
