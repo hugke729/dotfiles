@@ -14,6 +14,8 @@ from MyPlotFunctions import flipy
 from MyNumpyTools import minmax
 from matplotlib.pyplot import clf
 from MyInteractive import disp_latlon, click_dist, click_km
+from MyMITgcmUtils import open_simulation, get_xgrid
+from MyColormaps import red_yellow_grey_cyan_blue as rygcb
 
 # Work-around for warnings that keeps coming up but aren't problematic
 warnings.filterwarnings('ignore', '.*assigned to before global declaration*.')
