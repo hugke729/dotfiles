@@ -18,7 +18,7 @@ alias c="clear"
 alias diff='colordiff'
 alias rm='trash-rm'
 alias tmd="tmux detach"
-alias latexdiff='latexdiff --append-context2cmd="abstract"'
+alias latexdiff='latexdiff --append-context2cmd="abstract" --append-mboxsafecmd="\SIrange"'
 alias manh='man --html=google-chrome'
 
 # Directories
@@ -52,7 +52,7 @@ alias shvb='sh ~/.vimbuffer'
 alias sv='sudo vim'
 alias jb='jekyll build'
 alias jsd='jekyll serve --detach'
-alias clean_latex='rm -i *.out; rm -i *.aux; rm -i *.log; rm -i *.aux; rm -i *.bbl; rm *.blg'
+alias clean_latex='rm -i *.out; rm -i *.aux; rm -i *.log; rm -i *.aux; rm -i *.bbl; rm *.blg; rm -i *.fls; rm *.dvi; rm *.fdb_latexmk'
 alias briss='java -jar ~/Programs/briss-0.9/briss-0.9.jar'
 alias hah='k2pdfopt -grid 1x2x1 -w 1s 0.5s'
 alias ncdump='ncdump -c'
