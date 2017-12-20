@@ -6,6 +6,7 @@ import numpy as np
 import numpy.ma as ma
 import matplotlib
 from matplotlib.pyplot import figure
+from matplotlib.animation import FuncAnimation
 from numpy.core.numeric import array_repr
 from IPython.terminal.embed import InteractiveShellEmbed
 from MyFigureUtils import splay_figures
