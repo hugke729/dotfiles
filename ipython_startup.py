@@ -3,12 +3,16 @@ from collections import OrderedDict
 import warnings
 import pickle
 import numpy as np
+from numpy import pi, sin, cos
 import numpy.ma as ma
 import matplotlib
 from matplotlib.pyplot import figure
 from matplotlib.animation import FuncAnimation
 from numpy.core.numeric import array_repr
 from IPython.terminal.embed import InteractiveShellEmbed
+from IPython.core.oinspect import Inspector
+from docrepr import sphinxify
+from subprocess import Popen, PIPE
 from MyFigureUtils import splay_figures
 sf = splay_figures
 from MyPlotFunctions import flipy
@@ -98,3 +102,11 @@ def fromfile(filename):
 def equal(ax=None):
     ax = plt.gca() if ax is None else ax
     ax.set_aspect('equal', 'box-forced')
+
+
+def doc(fn):
+    oinfo = Inspector().info(fn)
+    oinfo['name'] = fn.__name__
+    url = sphinxify.rich_repr(oinfo)
+    Popen(['python -m webbrowser \'' + url + '\''],
+           stderr=PIPE, stdout=PIPE, shell=True)  
