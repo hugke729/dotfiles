@@ -8,8 +8,10 @@ import numpy.ma as ma
 import matplotlib
 from matplotlib.pyplot import figure
 from matplotlib.animation import FuncAnimation
+from shutil import copyfile
+import os
 from numpy.core.numeric import array_repr
-from IPython.terminal.embed import InteractiveShellEmbed
+from seawater import f as coriolis_f
 from IPython.core.oinspect import Inspector
 from docrepr import sphinxify
 from subprocess import Popen, PIPE
@@ -21,6 +23,7 @@ from matplotlib.pyplot import clf
 from MyInteractive import disp_latlon, click_dist, click_km
 from MyMITgcmUtils import open_simulation, get_xgrid
 from MyColormaps import red_yellow_grey_cyan_blue as rygcb
+from MyXarray import xa_masked_equal as me
 
 # Work-around for warnings that keeps coming up but aren't problematic
 warnings.filterwarnings('ignore', '.*assigned to before global declaration*.')
@@ -31,10 +34,11 @@ warnings.filterwarnings('ignore','elementwise comparison')
 warnings.filterwarnings('ignore','.*requires a non-empty pattern match*.')
 warnings.filterwarnings('ignore',".*Couldn't find available_diagnostics.log*.")
 warnings.filterwarnings('ignore',".*Not sure what to do with rlev = L*.")
+warnings.filterwarnings('ignore',".*matplotlib.backends*.")
 
 matplotlib.font_manager.X11FontDirectories.append('/home/hugke729/.local/share/fonts/')
 
-
+get_ipython().magic('autocall 2');
 
 # Make background grey, not white
 def grey():
@@ -80,9 +84,8 @@ class AD(dict):
         super(AD, self).__init__(*args, **kwargs)
         self.__dict__ = self
 
-ipshell = InteractiveShellEmbed()
-ipshell.magic('%load_ext autoreload')
-ipshell.magic('%autoreload 2')
+# ipshell = InteractiveShellEmbed()
+# ipshell.magic('%load_ext autoreload')
 
 # Add array shape to Numpy's repr
 
@@ -106,7 +109,22 @@ def equal(ax=None):
 
 def doc(fn):
     oinfo = Inspector().info(fn)
-    oinfo['name'] = fn.__name__
     url = sphinxify.rich_repr(oinfo)
-    Popen(['python -m webbrowser \'' + url + '\''],
-           stderr=PIPE, stdout=PIPE, shell=True)  
+    try:
+        oinfo['name'] = fn.__name__
+    except AttributeError:
+        oinfo['name'] = repr(fn)
+    new_url = os.path.dirname(url) + '/' + oinfo['name'] + '.html'
+    url = copyfile(url, new_url)
+    url = 'file://' + url
+    url_str = url
+    print(url_str)
+    Popen(['chromium-browser', '--app=' + url_str],
+          stderr=PIPE, stdout=PIPE)
+
+
+def runfile(filename):
+    exec(open(filename).read())
+
+
+pi2 = 2*pi
