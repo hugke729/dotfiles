@@ -57,4 +57,5 @@ alias clean_latex='rm -i *.out; rm -i *.aux; rm -i *.log; rm -i *.aux; rm -i *.b
 alias briss='java -jar ~/Programs/briss-0.9/briss-0.9.jar'
 alias hah='k2pdfopt -grid 1x2x1 -w 1s 0.5s'
 alias ncdump='ncdump -c'
-alias matlab='rlwrap -a /home/hugke729/Programs/matlab/bin/matlab -nodesktop -nosplash'
+# alias matlab='rlwrap -a /home/hugke729/Programs/matlab/bin/matlab -nodesktop -nosplash'
+alias matlab='jupyter console --kernel imatlab'
