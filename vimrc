@@ -113,6 +113,8 @@ map <C-_> gcl
 " Window management
 set splitbelow
 set splitright
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
 " Persist history
 set nobackup                " Don't keep a backup file
@@ -131,3 +133,5 @@ let g:hexmode_patterns='*.bin'
 
 " Path
 au BufRead,BufNewFile *.h set filetype=fortran
+
+
