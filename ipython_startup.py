@@ -17,7 +17,7 @@ from docrepr import sphinxify
 from subprocess import Popen, PIPE
 from MyFigureUtils import splay_figures
 sf = splay_figures
-from MyPlotFunctions import flipy
+from MyPlotFunctions import flipy, flipx
 from MyNumpyTools import minmax
 from matplotlib.pyplot import clf
 from MyInteractive import disp_latlon, click_dist, click_km
