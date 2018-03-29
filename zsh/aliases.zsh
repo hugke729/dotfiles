@@ -36,6 +36,7 @@ alias win='cd /media/hugke729/C-Drive1/Users/Ken/Documents/'
 alias sshj='ssh jasper'
 alias sshn='ssh nestor'
 alias sshp='ssh parallel'
+alias ssho='ssh orcinus'
 
 # Git
 alias ga='git add'
