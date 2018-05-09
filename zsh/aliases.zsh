@@ -38,7 +38,7 @@ alias sshn='ssh nestor'
 alias sshp='ssh parallel'
 alias ssho='ssh orcinus'
 alias sshc='ssh -t cedar "bash"'
-alias sshg='ssh graham'
+alias sshg='ssh -t graham "bash"'
 
 # Git
 alias ga='git add'
