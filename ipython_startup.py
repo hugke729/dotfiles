@@ -18,12 +18,12 @@ from subprocess import Popen, PIPE
 from MyFigureUtils import splay_figures
 sf = splay_figures
 from MyPlotFunctions import flipy, flipx
-from MyNumpyTools import minmax
+from MyNumpyTools import minmax, midpoint
 from matplotlib.pyplot import clf
 from MyInteractive import disp_latlon, click_dist, click_km
 from MyMITgcmUtils import open_simulation, get_xgrid
 from MyColormaps import red_yellow_grey_cyan_blue as rygcb
-from MyXarray import xa_masked_equal as me
+from MyXarray import xa_masked_equal as xme
 
 # Work-around for warnings that keeps coming up but aren't problematic
 warnings.filterwarnings('ignore', '.*assigned to before global declaration*.')
@@ -119,7 +119,9 @@ def doc(fn):
     url = 'file://' + url
     url_str = url
     print(url_str)
-    Popen(['chromium-browser', '--app=' + url_str],
+    # Popen(['chromium-browser', '--app=' + url_str],
+    #       stderr=PIPE, stdout=PIPE)
+    Popen(['/usr/bin/google-chrome', url_str],
           stderr=PIPE, stdout=PIPE)
 
 
