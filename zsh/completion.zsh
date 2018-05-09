@@ -18,4 +18,4 @@ zstyle ':completion:*:approximate:*' max-errors 1 numeric
 zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)(?)*==34=00}:${(s.:.)LS_COLORS}")';
 
 # https://superuser.com/questions/415650/does-a-fuzzy-matching-mode-exist-for-the-zsh-shell
-zstyle ':completion:*' matcher-list 'r:|?=** m:{a-z\-}={A-Z\_}'
+# zstyle ':completion:*' matcher-list 'r:|?=** m:{a-z\-}={A-Z\_}'
